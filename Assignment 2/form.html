@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--
+Zach Parker
+Assignment 2 - HTML 
+CSC 453
+-->
+<html>
+    <head>
+        <title>Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!--Placed all styles within this HTML file. If 
+        this would be better in a CSS file going forward just let me know-->
+        <style>
+            .top {
+                background-color: blue;
+                text-align: center;
+                color: white;
+            }
+
+            body  { 
+                background-color: lightgrey;    
+            }
+
+            label { 
+                display: table-cell; 
+                padding-right: 20px;
+                padding-top:10px;
+                padding-bottom: 10px;
+                font-weight: bold;
+            }
+
+            input { 
+                display: table-cell;
+                width: 200px;    
+                padding-left: 0px;
+            } 
+        </style>
+    </head>
+    
+    <body>
+        <h1 class="top">New Customer Information</h1>
+        
+            <!--Start of form-->
+            <form action="index.php" method="post">
+                <h3>Input Customer Information</h3>
+                
+                <!--Fields for the user to fill out-->
+                <p style="display: table-row;">
+                    <label>Name:</label>
+                    <input type="text" name="name" required>
+                </p>
+                <p style="display: table-row;">
+                    <label>Address:</label>
+                    <input type="text" name="address" required>
+                </p>
+                <p style="display: table-row;">
+                    <label>City:</label>
+                    <input type="text" name="city" required>
+                </p>
+                <p style="display: table-row;">
+                    <label>State:</label>
+                    <input type="text" name="state" required>
+                </p>
+                <p style="display: table-row;">
+                    <label>Zip Code:</label>
+                    <input type="text" name="zip" required>
+                </p>
+                <p style="display: table-row;">
+                    <label>Email:</label>
+                    <input type="email" name="email" required>
+                </p>
+                
+                <!--Radio buttons-->
+                <p class="radio">
+                    <label> Customer Type:</label>
+                    <input type="radio" name="customer_type" value="Standard" style="width: 20px" required> Standard<br>
+                    <input type="radio" name="customer_type" value="Premier" style="width: 20px"  required> Premier<br>
+                    <input type="radio" name="customer_type" value="Employee" style="width: 20px"  required> Employee         
+                </p>
+                
+                <!--Notes area-->
+                <p>Notes:
+                    <textarea name="comments" rows="10" cols="100" style="display: block" required></textarea></p>
+                
+                <!--Submit button-->
+                <p>
+                    <input type="submit" name="submit" style="width: 100px;">
+                </p>
+                
+        </form>
+    </body>
+    
+</html>
