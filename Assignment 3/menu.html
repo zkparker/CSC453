@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+Zach Parker
+Assignment 3 - HTML 
+CSC 453
+-->
+<html>
+    <head>
+        <title>Assignment 3</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!--Placed all styles within this HTML file. If 
+        this would be better in a CSS file going forward just let me know-->
+        <style>
+            .top {
+                background-color: gray;
+                text-align: center;
+                color: white;
+            }
+
+            body  { 
+                background-color: lightgrey;    
+            }
+
+            label { 
+                display: table-cell; 
+                padding-right: 20px;
+                padding-top:10px;
+                padding-bottom: 10px;
+                font-weight: bold;
+            }
+
+            input { 
+                display: table-cell;
+                width: 200px;    
+                padding-left: 0px;
+            } 
+        </style>
+    </head>
+    
+    <body>
+        <h1 class="top">Volume Calculator</h1>
+        
+            <!--Start of form-->
+            <form action="index.php" method="post">
+                <h3>Calculate Volume of Rectangle</h3>
+                
+                <!--Fields for the user to fill out-->
+                <p style="display: table-row;">
+                    <label>Width:</label>
+                    <input type="number" name="width" required>
+                </p>
+                <p style="display: table-row;">
+                    <label>Length:</label>
+                    <input type="number" name="length" required>
+                </p>
+                <p style="display: table-row;">
+                    <label>Height:</label>
+                    <input type="number" name="height" required>
+                </p>
+                
+                <h3>Calculate Volume of a Cone</h3>
+                <p style="display: table-row;">
+                    <label>Radius:</label>
+                    <input type="number" name="radius" required>
+                </p>
+                <p style="display: table-row;">
+                    <label>Height:</label>
+                    <input type="number" name="cheight" required>
+                </p>
+                                
+                               
+                <!--Calculate button-->
+                <p>
+                    <input type="submit" name="submit" style="width: 100px;" value="Calculate">
+                </p>
+                
+        </form>
+    </body>
+    
+</html>
